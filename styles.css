@@ -2,6 +2,7 @@
 
 :root {
     font-family: "Roboto", "sans-serif";
+    --snow-font-color: snow;
 }
 
 * {
@@ -36,4 +37,109 @@ main {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: lightgrey;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 1rem;
+}
+
+.header > .search-container {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.header > .search-container > input {
+    background-color: whitesmoke;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+}
+
+.header > .profile-container {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.header > .profile-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.header > .profile-container > .profile-name {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.header > .welcome-container {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.header > .welcome-container > .welcome-logo {
+    grid-column: 1 / 2;
+}
+
+.header > .welcome-container > div {
+    grid-column: 2 / 3;
+}
+
+.header > .welcome-container > div.welcome-msg {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.header > .welcome-container > div.welcome-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.header > .btns-container {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem
+}
+
+.header > .btns-container > button {
+    background-color: darkcyan;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 2rem;
+    color: var(--snow-font-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.header > .btns-container > button:hover {
+    cursor: pointer;
+}
+
+
+.sidebar {
+    color: var(--snow-font-color);
+}
+
+.sidebar > .sidebar-logo {
+    font-size: 1.4rem;
 }
