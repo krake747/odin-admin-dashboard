@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    font-family: "Roboto", "sans-serif";
+    font-family: "Roboto", sans-serif;
     --snow-font-color: snow;
 }
 
@@ -12,10 +12,9 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 6fr;
-    height: 100vh;
-    width: 100vw;
+    max-height: 100vh;
 }
 
 header {
@@ -25,13 +24,6 @@ header {
     background-color: lightcyan;
 }
 
-nav {
-    display: grid;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
-    background-color: lightcoral;
-}
-
 main {
     display: grid;
     grid-column: 2 / 3;
@@ -39,6 +31,7 @@ main {
     background-color: lightgray;
 }
 
+/* HEADER */
 .header {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -135,46 +128,97 @@ main {
     cursor: pointer;
 }
 
+/* NAV > SIDEBAR */
+nav {
+    background-color: lightcoral;
+    grid-row: 1 / 3;
+}
 
 .sidebar {
     color: var(--snow-font-color);
+    grid-column: 1 / 2;
+    font-weight: 700;
+    padding: 1rem 0 0 1rem;
 }
 
-.sidebar > .sidebar-logo {
-    font-size: 1.6rem;
+.sidebar .sidebar-logo {
+    font-size: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .sidebar ul {
+    font-size: 1.5rem;
+    padding: 2rem 0 2rem 0;
+}
+
+.sidebar ul > li {
     list-style-type: none;
-    padding: 0 1rem 0 1rem;
-    font-size: 1.4rem;
-}
+    padding: 0.8rem 0 0 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
 
-/* .sidebar > .sidebar-main-links {
 }
-
-.sidebar > .sidebar-secondary-links {
-} */
 
 .main {
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
+.main > .project-header {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
 .projects-container {
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-row: 2 / 5;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr) 0.1fr;
+    gap: 1rem;
+}
+
+.projects-container > .project-item {
+    height: 300px;
+    background-color: #FFFFFF;
+    color: black;
+    text-align: left;
+    margin: 1rem;
 }
 
 .announcements-container {
     grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-row: 1 / 3;
+    height: 300px;
+    background-color: pink;
+}
+
+.announcements-container > .announcements-item {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: left;
+    margin: 1rem;
 }
 
 .trending-container {
+    background-color: hotpink;
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
+    height: 300px;
+}
+
+.trending-container > .trending-item {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: left;
+    margin: 1rem;
 }
 

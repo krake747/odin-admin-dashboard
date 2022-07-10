@@ -4,22 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-icons.css" />
     <title>Admin Dashboard</title>
   </head>
   <body>
     <header class="header">
       <div class="search-container">
-        <div class="search-logo">Logo</div>
+        <div class="search-logo">
+          <span class="material-icons">&#xE87C;</span>
+        </div>
         <input type="text" name="search" id="search" placeholder="Search..." />
       </div>
       <div class="profile-container">
-        <div class="profile-notifications">Bell</div>
-        <div class="profile-logo">Logo</div>
+        <div class="profile-notifications">
+          <span class="material-icons">&#xE87C;</span>
+        </div>
+        <div class="profile-logo">
+          <span class="material-icons">&#xE87C;</span>
+        </div>
         <div class="profile-name">Morgan Oakley</div>
       </div>
       <div class="welcome-container">
-        <div class="welcome-logo">Logo</div>
+        <div class="welcome-logo">
+          <span class="material-icons">&#xE87C;</span>
+        </div>
         <div class="welcome-msg">Hi there,</div>
         <div class="welcome-name">Morgan Oakley (@morgan)</div>
       </div>
@@ -29,27 +42,29 @@
         <button type="button">Share</button>
       </div>
     </header>
-    <nav class="sidebar">
-      <div class="sidebar-logo">Dashboard</div>
-      <div class="sidebar-main-links">
-        <ul>
-          <li><span>H</span> Home</li>
-          <li><span>P</span> Profile</li>
-          <li><span>M</span> Message</li>
-          <li><span>H</span> History</li>
-          <li><span>T</span> Tasks</li>
-          <li><span>C</span> Communities</li>
+    <nav>
+      <div class="sidebar">
+        <div class="sidebar-logo">
+          <span class="material-icons md-48">dashboard</span>
+          Dashboard
+        </div>
+        <ul class="sidebar-main-links">
+          <li><span class="material-icons">home</span>Home</li>
+          <li><span class="material-icons">contact_mail</span>Profile</li>
+          <li><span class="material-icons">chat_bubble</span>Message</li>
+          <li><span class="material-icons">history</span>History</li>
+          <li><span class="material-icons">task</span>Tasks</li>
+          <li><span class="material-icons">groups</span>Communities</li>
         </ul>
-      </div>
-      <div class="sidebar-secondary-links">
-        <ul>
-          <li><span>S</span> Settings</li>
-          <li><span>S</span> Support</li>
-          <li><span>P</span> Privacy</li>
+        <ul class="sidebar-secondary-links">
+          <li><span class="material-icons">settings</span>Settings</li>
+          <li><span class="material-icons">support_agent</span>Support</li>
+          <li><span class="material-icons">verified_user</span>Privacy</li>
         </ul>
       </div>
     </nav>
     <main class="main">
+      <h1 class="project-header">Projects</h1>
       <div class="projects-container">
         <div class="project-item">
           <div class="title">Super Cool Project</div>
@@ -101,20 +116,22 @@
         </div>
       </div>
       <div class="announcements-container">
-        <div class="annoucements-item">
+        <h1 class="announcements-header">Announcements</h1>
+        <div class="announcements-item">
           <div class="title">Site Maintenance</div>
           <p>Hello there</p>
         </div>
-        <div class="annoucements-item">
+        <div class="announcements-item">
           <div class="title">Community Share Day</div>
           <p>Hello there</p>
         </div>
-        <div class="annoucements-item">
+        <div class="announcements-item">
           <div class="title">Updated Privacy Policy</div>
           <p>Hello there</p>
         </div>
       </div>
       <div class="trending-container">
+        <h1 class="trending-header">Trending</h1>
         <div class="trending-item">
           <div class="trending-tag">@tegan</div>
           <div class="trending-text">World Peace Builder</div>
